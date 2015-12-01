@@ -1,0 +1,29 @@
+{
+  "name": "instagrumble",
+  "authors": [
+    "Connor Gutman <connorgutman@gmail.com>"
+  ],
+  "description": "If pugs could take selfies",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "pugs"
+  ],
+  "license": "MIT",
+  "homepage": "connorgutman.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4",
+    "components-font-awesome": "~4.5.0",
+    "moment": "~2.10.6"
+  }
+}
