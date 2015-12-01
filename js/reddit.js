@@ -14,6 +14,7 @@ $.getJSON(redditAPI, function(json) {
   var postDate = [];
   var postDateHuman = [];
   var source = [];
+  var adCount = 0;
 
   //html for a card
   var card = "<div class='col-sm-8 col-sm-offset-2'><div class='card'> <div class='card-header'> <p class='card-top'> <span> <img src='img/pug.png' alt='...' class='avatar'> </span> <span> <a class='author permalink'></a> </span> <span class='time pull-right'></span> </p> </div> <img class='card-img-top pug-photo' src='' alt=''> <div class='card-block'> <i class='like fa fa-heart-o'></i> <i class='fa fa-comment-o'></i> <i class='fa fa-share-square-o'></i> <i class='fa fa-ellipsis-v pull-right'></i> <hr> <p> <strong class='ups'></strong> likes</p> <p class='card-text'> <span> <a class='author'></a> </span> <span class='title'></span> <span class='hashtag'></span> </p> </div></div></div>";
@@ -61,9 +62,11 @@ $.getJSON(redditAPI, function(json) {
     $(pug + " .time").text(postDateHuman[i]);
 
     //Every 15 posts insert an ad
-    //if (i % 15 === 0) {
-      //$(".container").append("<div class='row' id='pugad" + "\'>" + adcard + "</div>");
-    //}
+    adCount++;
+    if (adCount == 5;) {
+      $(".container").append("<div class='row'>" + adcard + "</div>");
+
+    }
 
     //Hide Videos, Albums, Instagram posts, and Selfposts
     source[i] = json.data.children[i].data.domain;
