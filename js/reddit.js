@@ -90,7 +90,7 @@ $.getJSON(redditAPI, function(json) {
   }
 
   if(adCount == 5;) {
-    $(".container").append("<div class='row'>" + "Hello there!" + "</div>");
+    //$(".container").append("<div class='row'>" + "Hello there!" + "</div>");
 
   }
 
