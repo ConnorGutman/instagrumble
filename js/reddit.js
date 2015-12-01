@@ -61,7 +61,7 @@ $.getJSON(redditAPI, function(json) {
     console.log('Post Date: ', postDateHuman[i]);
     $(pug + " .time").text(postDateHuman[i]);
 
-    //Every 15 posts insert an ad
+    //Every 10 posts insert an ad
     adCount++;
     if (adCount == 2 || adCount == 10 || adCount == 20 || adCount == 30 || adCount == 40 || adCount == 50 || adCount == 60 || adCount == 70 || adCount == 80 || adCount == 90 || adCount == 100) {
       $(".container").append("<div class='row' id='pugad" + "\'>" + adcard + adCount + "</div>");
