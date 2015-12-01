@@ -62,32 +62,40 @@ $.getJSON(redditAPI, function(json) {
     $(pug + " .time").text(postDateHuman[i]);
 
     //Every 15 posts insert an ad
-    //if (i % 15 === 0) {
-      //$(".container").append("<div class='row' id='pugad" + "\'>" + adcard + "</div>");
-    //}
+    adCount++;
+    if (adCount == 2 || adCount == 10 || adCount == 20 || adCount == 30 || adCount == 40 || adCount == 50 || adCount == 60 || adCount == 70 || adCount == 80 || adCount == 90 || adCount == 100) {
+      $(".container").append("<div class='row' id='pugad" + "\'>" + adcard + adCount + "</div>");
+    }
 
     //Hide Videos, Albums, Instagram posts, and Selfposts
     source[i] = json.data.children[i].data.domain;
     if (source[i] == 'youtube.com') {
       $(pug).css('display', 'none');
+      adCount--;
     }
     if (source[i] == 'instagram.com') {
       $(pug).css('display', 'none');
+      adCount--;
     }
     if (source[i] == 'self.pugs') {
       $(pug).css('display', 'none');
+      adCount--;
     }
     if (photo[i].match("^http://imgur.com/a")) {
       $(pug).css('display', 'none');
+      adCount--;
     }
     if (photo[i].match("^https://imgur.com/a")) {
       $(pug).css('display', 'none');
+      adCount--;
     }
     if (photo[i].match("^http://imgur.com/gallery")) {
       $(pug).css('display', 'none');
+      adCount--;
     }
     if (photo[i].match("^https://imgur.com/gallery")) {
       $(pug).css('display', 'none');
+      adCount--;
     }
   }
 });
