@@ -67,7 +67,7 @@ $.getJSON(redditAPI, function(json) {
 
     //Every 15 posts insert an ad
     if (i % 15 === 0) {
-      $(".container").append("<div class='row' id='pugad" + "\'>" + ad + "</div>");
+      $(".container").append("<div class='row' id='" + "\'>" + ad + "</div>");
     }
 
     //Hide Videos, Albums, Instagram posts, and Selfposts
