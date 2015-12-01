@@ -87,10 +87,10 @@ $.getJSON(redditAPI, function(json) {
 
     //Every 15 posts insert an ad
     adCount++;
-    if (adCount = 5;) {
-      $(".container").append("<div class='row'>" + "Hello there!" + "</div>");
+    //if (adCount = 5;) {
+      //$(".container").append("<div class='row'>" + "Hello there!" + "</div>");
 
-    }
+    //}
 
   }
 });
