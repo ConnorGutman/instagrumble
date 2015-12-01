@@ -61,13 +61,6 @@ $.getJSON(redditAPI, function(json) {
     console.log('Post Date: ', postDateHuman[i]);
     $(pug + " .time").text(postDateHuman[i]);
 
-    //Every 15 posts insert an ad
-    adCount++;
-    if (adCount == 5;) {
-      $(".container").append("<div class='row'>" + adcard + "</div>");
-
-    }
-
     //Hide Videos, Albums, Instagram posts, and Selfposts
     source[i] = json.data.children[i].data.domain;
     if (source[i] == 'youtube.com') {
@@ -91,5 +84,13 @@ $.getJSON(redditAPI, function(json) {
     if (photo[i].match("^https://imgur.com/gallery")) {
       $(pug).css('display', 'none');
     }
+
+    //Every 15 posts insert an ad
+    adCount++;
+    if (adCount = 5;) {
+      $(".container").append("<div class='row'>" + "Hello there!" + "</div>");
+
+    }
+
   }
 });
