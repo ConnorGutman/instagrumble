@@ -96,19 +96,6 @@ $.getJSON(redditAPI, function(json) {
     }
 
     //Hide Videos, Albums, Instagram posts, and Selfposts
-    source[i] = json.data.children[i].data.domain;
-    if (source[i] == 'youtube.com') {
-      $(pug).css('display', 'none');
-      adCount--;
-    }
-    if (source[i] == 'instagram.com') {
-      $(pug).css('display', 'none');
-      adCount--;
-    }
-    if (source[i] == 'self.pugs') {
-      $(pug).css('display', 'none');
-      adCount--;
-    }
     if (photo[i].match("^http://imgur.com/") || photo[i].match("^https://imgur.com/")) {
       if (photo[i].match("^http://imgur.com/gallery") || photo[i].match("^https://imgur.com/gallery") || photo[i].match("^http://imgur.com/a") || photo[i].match("^https://imgur.com/a")) {
         $(pug).css('display', 'none');
