@@ -50,11 +50,6 @@ $.getJSON(redditAPI, function(json) {
         </div> \
       </div>";
 
-  //html for a ad
-  var ad = "<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script> <!-- instagrumble --> <ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-4676498492886978' data-ad-slot='2014569934' data-ad-format='auto'></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>";
-
-
-
   //Loop through and assign each variable
   for (i = 0; i < postCount; i++) { //Note that the first two posts are stickied
 
@@ -99,13 +94,11 @@ $.getJSON(redditAPI, function(json) {
     if (photo[i].match("^http://imgur.com/") || photo[i].match("^https://imgur.com/")) {
       if (photo[i].match("^http://imgur.com/gallery") || photo[i].match("^https://imgur.com/gallery") || photo[i].match("^http://imgur.com/a") || photo[i].match("^https://imgur.com/a")) {
         $(pug).css('display', 'none');
-        //adCount--;
-      }else {
+      } else {
 
       }
-    }else {
+    } else {
       $(pug).css('display', 'none');
-      //adCount--;
     }
   }
 });
