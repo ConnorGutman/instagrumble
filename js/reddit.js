@@ -110,11 +110,11 @@ $.getJSON(redditAPI, function(json) {
       adCount--;
     }
     if (photo[i].match("^http://imgur.com/") || photo[i].match("^https://imgur.com/")) {
-      if (photo[i].match("^http://imgur.com/gallery") || photo[i].match("^http://imgur.com/gallery") || photo[i].match("^http://imgur.com/a") || photo[i].match("^http://imgur.com/a")) {
+      if (photo[i].match("^http://imgur.com/gallery") || photo[i].match("^https://imgur.com/gallery") || photo[i].match("^http://imgur.com/a") || photo[i].match("^https://imgur.com/a")) {
         $(pug).css('display', 'none');
         adCount--;
       }else {
-        
+
       }
     }else {
       $(pug).css('display', 'none');
