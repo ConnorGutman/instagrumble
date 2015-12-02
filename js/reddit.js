@@ -86,7 +86,7 @@ $.getJSON(redditAPI, function(json) {
 
     //Every 10 posts insert an ad
     adCount++;
-    if (adCount == 2 || adCount == 20 || adCount == 60) {
+    if (adCount == 1 || adCount == 20 || adCount == 60) {
       $("#home").append("<div class='row' id='pugad" + "\'>" + adcard + "</div>");
     }
 
