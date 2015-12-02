@@ -45,7 +45,7 @@
         <hr>
         <h3 class="text-center">Really though,</h3>
         <hr>
-        <p class="text-center">My name is <a href="http://www.connorgutman.com">Connor</a>, and I'm a developer. Recently the alpha for bootstrap v4.0 was released and I couldn't wait to test it out. I like pugs and yeah. This site pulls data from Reddit via <a href="http://www.reddit.com/r/pugs">/r/pugs</a> and puts it in a instagram inspired format. Clicking a username will bring you to the original submission comments, likes = upvotes, and posts are ordered newest-oldest.</p>
+        <p class="text-center">My name is <a href="http://www.connorgutman.com">Connor</a>, and I'm a developer. Recently the alpha for bootstrap v4.0 was released and I couldn't wait to test it out. I like pugs and yeah. This site pulls data from Reddit via <a href="http://www.reddit.com/r/pugs">/r/pugs</a>          and puts it in a instagram inspired format. Clicking a username will bring you to the original submission comments, likes = upvotes, and posts are ordered newest-oldest.</p>
         <hr>
         <h3 class="text-center">Useful links:</h3>
         <hr>
@@ -92,6 +92,25 @@
           $("#toHomeLi").addClass("active");
         });
       });
+    </script>
+    <!-- Analytics -->
+    <script>
+      < script >
+        (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-48299946-2', 'auto');
+      ga('send', 'pageview');
+    </script>
     </script>
 </body>
 
