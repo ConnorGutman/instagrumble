@@ -22,34 +22,77 @@
     </button>
     <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
       <ul class="nav navbar-nav pull-right">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item active" id="toHomeLi">
+          <a class="nav-link" id="toHome" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        <li class="nav-item" id="toAboutLi">
+          <a class="nav-link" id="toAbout" href="#">About</a>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="container">
+  <div class="container" id="home">
   </div>
-  <footer class="hidden">
-    <p class="text-center">You've reached 100 pugs! Unfortunately, any more pugs and Reddit might get upset. If you'd like to see even more pugs check out <a href="https://www.reddit.com/r/pugs">/r/pugs</a></p>
-  </footer>
-  <!-- jQuery first, then Bootstrap JS. -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
-  <script src="bower_components/moment/moment.js"></script>
-  <script src="js/reddit.js"></script>
-  <script>
-    $(document).ready(function() {
+  <div class="container noDisplay" id="about">
+    <div class='row'>
+      <div class='col-sm-8 col-sm-offset-2'>
+        <h1 class="text-center">About Instagrumble</h1>
+        <br>
+        <p class="text-center">
+          <span class="lead">
+            <mark>*sarcastic tone*</mark>
+          </span> Instagrumble is a social network for pugs. Sometimes as a pug you just want to brag about your face flabs or what bone you had for dinner. Instagrumble aims to be a place for pugs to connect and meet with other similar canine friends.</p>
+        <hr>
+        <h3 class="text-center">Really though,</h3>
+        <hr>
+        <p class="text-center">My name is <a href="http://www.connorgutman.com">Connor</a>, and I'm a developer. Recently the alpha for bootstrap v4.0 was released and I couldn't wait to test it out. I like pugs and yeah. This site pulls data from Reddit via <a href="http://www.reddit.com/r/pugs">/r/pugs</a> and puts it in a instagram inspired format. Clicking a username will bring you to the original submission comments, likes = upvotes, and posts are ordered newest-oldest.</p>
+        <hr>
+        <h3 class="text-center">Useful links:</h3>
+        <hr>
+        <ul>
+          <li><a href="http://www.reddit.com/r/pugs">/r/pugs</a></li>
+          <li><a href="https://github.com/ConnorGutman/instagrumble">Github Repo</a></li>
+          <li><a href="http://v4-alpha.getbootstrap.com/">Bootstrap v4</a></li>
+          <li><a href="http://www.connorgutman.com">My Portfolio</a></li>
+          <li><a href="http://www.eatsmpl.com">Shameless business plug</a></li>
+        </ul>
+      </div>
+    </div>
+    <footer class="hidden">
+      <p class="text-center">You've reached 100 pugs! Unfortunately, any more pugs and Reddit might get upset. If you'd like to see even more pugs check out <a href="https://www.reddit.com/r/pugs">/r/pugs</a></p>
+    </footer>
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="js/reddit.js"></script>
+    <script>
+      $(document).ready(function() {
 
-      setTimeout(function() {
-        $("footer").removeClass("hidden");
-      }, 3000);
+        setTimeout(function() {
+          $("footer").removeClass("hidden");
+        }, 3000);
 
-    });
-  </script>
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#toAbout").click(function() {
+          $("#home").addClass("noDisplay");
+          $("footer").addClass("noDisplay");
+          $("#about").removeClass("noDisplay");
+          $("#toHomeLi").removeClass("active");
+          $("#toAboutLi").addClass("active");
+        });
+        $("#toHome").click(function() {
+          $("#home").removeClass("noDisplay");
+          $("footer").removeClass("noDisplay");
+          $("#about").addClass("noDisplay");
+          $("#toAboutLi").removeClass("active");
+          $("#toHomeLi").addClass("active");
+        });
+      });
+    </script>
 </body>
 
 </html>

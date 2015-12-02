@@ -23,6 +23,12 @@ h1 {
     padding-top: 1vh;
   }
 }
+#home {
+
+}
+#about {
+
+}
 .row {
   padding: 5vh 0;
 }
@@ -46,6 +52,9 @@ h1 {
 .card-img-top {
   width: 100%;
   height: auto;
+}
+.noDisplay {
+  display: none;
 }
 .hidden {
   opacity: 0;

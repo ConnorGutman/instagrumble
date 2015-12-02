@@ -54,7 +54,7 @@ $.getJSON(redditAPI, function(json) {
   for (i = 0; i < postCount; i++) { //Note that the first two posts are stickied
 
     //Create a card
-    $(".container").append("<div class='row' id='pug" + i + "\'>" + card + "</div>");
+    $("#home").append("<div class='row' id='pug" + i + "\'>" + card + "</div>");
     var pug = "#pug" + i;
 
     //Assign each variable
@@ -87,7 +87,7 @@ $.getJSON(redditAPI, function(json) {
     //Every 10 posts insert an ad
     adCount++;
     if (adCount == 2 || adCount == 20 || adCount == 60) {
-      $(".container").append("<div class='row' id='pugad" + "\'>" + adcard + "</div>");
+      $("#home").append("<div class='row' id='pugad" + "\'>" + adcard + "</div>");
     }
 
     //Hide Videos, Albums, Instagram posts, and Selfposts
