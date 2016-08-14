@@ -16,7 +16,7 @@ $.getJSON(redditAPI, function(json) {
   var source = [];
 
   //html for a card
-  var card = "<div class='col-sm-8 col-sm-offset-2'><div class='card'> <div class='card-header'> <p class='card-top'> <span> <img src='img/pug.png' alt='...' class='avatar'> </span> <span> <a class='author permalink'></a> </span> <span class='time pull-right'></span> </p> </div> <img class='card-img-top pug-photo' src='' alt=''> <div class='card-block'> <i class='like fa fa-heart-o'></i> <i class='fa fa-comment-o'></i> <i class='fa fa-share-square-o'></i> <i class='fa fa-ellipsis-v pull-right'></i> <hr> <p> <strong class='ups'></strong> likes</p> <p class='card-text'> <span> <a class='author'></a> </span> <span class='title'></span> <span class='hashtag'></span> </p> </div></div></div>";
+  var card = "<div class='col-sm-8 offset-sm-2'><div class='card'> <div class='card-header'> <p class='card-top'> <span> <img src='img/pug.png' alt='...' class='avatar'> </span> <span> <a class='author permalink'></a> </span> <span class='time pull-right'></span> </p> </div> <img class='card-img-top pug-photo' src='' alt=''> <div class='card-block'> <i class='like fa fa-heart-o'></i> <i class='fa fa-comment-o'></i> <i class='fa fa-share-square-o'></i> <i class='fa fa-ellipsis-v pull-right'></i> <hr> <p> <strong class='ups'></strong> likes</p> <p class='card-text'> <span> <a class='author'></a> </span> <span class='title'></span> <span class='hashtag'></span> </p> </div></div></div>";
 
   //Loop through and assign each variable
   for (i = 0; i < postCount; i++) { //Note that the first two posts are stickied
